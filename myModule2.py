@@ -13,7 +13,7 @@ This script ...
 :CONTACT: pedro.machado@ntu.ac.uk
 :SINCE: <date>/2022
 :VERSION: 0.1
- 
+
 This file is part of Python bootcamp project.
 the <Python bootcamp> project can not be copied and/or distributed without the express
 permission of Pedro Machado <pedro.machado@ntu.ac.uk>
@@ -31,12 +31,14 @@ without the express permission of Pedro Machado pedro.machado@ntu.ac.uk'
 __license__ = 'Copyright (C) 2022'
 __date__ = '07/09/2022'
 __version__ = '0.1'
-__file_name__ = 'myModule.py'
-__description__ = 'print hello name'
+__file_name__ = 'myModule2.py'
+__description__ = 'print hello name twice'
+
+
 # ===============================================================================
 # IMPORT STATEMENTS
 # ===============================================================================
-import myModule2 as mmod2
+
 # ===============================================================================
 # GLOBAL VARIABLES DECLARATIONS
 # ===============================================================================
@@ -45,14 +47,13 @@ import myModule2 as mmod2
 # METHODS
 # ===============================================================================
 def greeting(name):
-    print("Hello " + name)
-    mmod2.greeting(name)
+    print("[mymod2] Hello " + name)
 # ===============================================================================
 #  TESTING AREA
 # ===============================================================================
 
 # ===============================================================================
-# MAIN METHOD 
+# MAIN METHOD
 # ===============================================================================
 
 # if __name__ == '__main__':
