@@ -54,12 +54,13 @@ def main():
     # mmod.person1["age"]=12
     # print(mmod.person1["age"])
     # print(mmod2.person2["country"])
-    if flag:
-        age = int(input("age: "))
-        xfactor = 10 / age
-        print("Age:", xfactor)
-    else:
-        exceptions.example_exceptions()
+    # if flag:
+    #     age = int(input("age: "))
+    #     xfactor = 10 / age
+    #     print("Age:", xfactor)
+    # else:
+    #     exceptions.example_exceptions()
+    exceptions.file_exceptions()
     print("End of the program!")
 # ===============================================================================
 #  TESTING AREA

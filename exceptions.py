@@ -53,6 +53,21 @@ def example_exceptions():
         print("Invalid input")
     except ZeroDivisionError:
         print("Cannot divide by 0")
+
+def file_exceptions():
+    try:
+        file = open("file.txt","a+")
+        age = int(input("age: "))
+        xfactor = 10 / age
+        file.write(str(xfactor)+"\n")
+    except (ValueError, ZeroDivisionError) :
+        print("invalid input")
+    # file.close()
+    else:
+        print("no excpection thrown")
+    # file.close()
+    finally:
+        file.close()
 # ===============================================================================
 #  TESTING AREA
 # ===============================================================================
