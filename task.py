@@ -11,11 +11,11 @@ This script ...
 :AUTHOR: Pedro Machado
 :ORGANIZATION: Nottingham Trent University
 :CONTACT: pedro.machado@ntu.ac.uk
-:SINCE: <date>/2022
+:SINCE: 07/09/2022
 :VERSION: 0.1
  
-This file is part of <PROJECT> project.
-the <PROJECT> project can not be copied and/or distributed without the express
+This file is part of Python bootcamp.
+the Python bootcamp can not be copied and/or distributed without the express
 permission of Pedro Machado <pedro.machado@ntu.ac.uk>
 
 Copyright (C) 2022 - All rights reserved, Nottingham Trent University
@@ -26,13 +26,15 @@ Copyright (C) 2022 - All rights reserved, Nottingham Trent University
 # ===============================================================================
 __author__ = 'Pedro Machado'
 __contact__ = 'pedro.amachado@ntu.ac.uk'
-__copyright__ = '<PROJECT> project can not be copied and/or distributed \
+__copyright__ = 'Python bootcamp can not be copied and/or distributed \
 without the express permission of Pedro Machado pedro.machado@ntu.ac.uk'
 __license__ = 'Copyright (C) 2022'
-__date__ = '<date>/2022'
+__date__ = '07/09/2022'
 __version__ = '0.1'
-__file_name__ = '<filename>.py'
-__description__ = '<description>'
+__file_name__ = 'task.py'
+__description__ = 'Get the the time and the details of the OS and save it into \
+                  myDetails.txt, copy the myDetails.txt to myDetails2.txt and \
+                   append the current time'
 # ===============================================================================
 # IMPORT STATEMENTS
 # ===============================================================================
