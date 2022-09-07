@@ -39,6 +39,7 @@ __description__ = 'Main python file'
 import myModule as mmod
 import myModule2 as mmod2
 import exceptions
+from timeit import timeit
 # ===============================================================================
 # GLOBAL VARIABLES DECLARATIONS
 # ===============================================================================
@@ -62,7 +63,27 @@ def main():
     #     exceptions.example_exceptions()
     # exceptions.file_exceptions()
     # exceptions.file_exceptions1()
-    exceptions.exceptions2()
+    #exceptions.exceptions2()
+
+
+    code1 = """
+def calculate_xfactor(age):
+    if age <= 0:
+        raise ValueError("age cannot be less than 1")
+try:
+    calculate_xfactor(-1)
+except ValueError as er:
+    pass"""
+    code2 = """
+def calculate_xfactor(age):
+    if age <= 0:
+        return None
+    xfactor = calculate_xfactor(-1)
+    if xfactor == None:
+        pass
+    """
+    print("Code1: ", timeit(code1, number=10000)*1000, "ms")
+    print("Code2: ", timeit(code2, number=10000)*1000, "ms")
     print("End of the program!")
 # ===============================================================================
 #  TESTING AREA
