@@ -68,6 +68,18 @@ def file_exceptions():
     # file.close()
     finally:
         file.close()
+
+def file_exceptions1():
+    try:
+        with open("file1.txt","a+") as file:
+            print("file oppened")
+            age = int(input("age: "))
+            xfactor = 10 / age
+            file.write(str(xfactor) + "\n")
+    except (ValueError, ZeroDivisionError):
+        print("invalid input")
+    else:
+        print("no excpection thrown")
 # ===============================================================================
 #  TESTING AREA
 # ===============================================================================

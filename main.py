@@ -60,7 +60,8 @@ def main():
     #     print("Age:", xfactor)
     # else:
     #     exceptions.example_exceptions()
-    exceptions.file_exceptions()
+    # exceptions.file_exceptions()
+    exceptions.file_exceptions1()
     print("End of the program!")
 # ===============================================================================
 #  TESTING AREA
