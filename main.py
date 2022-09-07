@@ -47,7 +47,6 @@ __description__ = 'Main python file'
 def main():
     print("The author is", __author__)
     print("The version is", __version__)
-    #blah
 # ===============================================================================
 #  TESTING AREA
 # ===============================================================================
