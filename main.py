@@ -41,6 +41,9 @@ import myModule2 as mmod2
 import exceptions
 from timeit import timeit
 from pathlib import Path
+import time
+from time import ctime
+import shutil
 # ===============================================================================
 # GLOBAL VARIABLES DECLARATIONS
 # ===============================================================================
@@ -112,22 +115,51 @@ def main():
 #     print("Code4: ", timeit(code4, number=1000) * 1000, "ms")
 #     print("End of the program!")
 
-    p = Path('/home/pedro/PycharmProjects/lecture_7')
-    var = list(p.glob('*.txt'))
-    var1 = list(p.glob('*.py'))
-    for i in range(0, len(var)):
-        if (var[i] == Path("file.txt")):
-            print("Found the file!")
-        else:
-            print("Wrong file!")
-    print(var1)
-    print("Is it a dir?: ",var1[0].is_dir(), var1[0])
-    print("Is it a file?: ", var1[0].is_file(), var1[0])
-    print(var1[0].name)
-    print(var1[0].suffix)
-    print(var1[0].parent)
-    print(p.with_name("file.txt"))
-    print(p.absolute())
+    # p = Path('/home/pedro/PycharmProjects/lecture_7')
+    # var = list(p.glob('*.txt'))
+    # var1 = list(p.glob('*.py'))
+    # for i in range(0, len(var)):
+    #     if (var[i] == Path("file.txt")):
+    #         print("Found the file!")
+    #     else:
+    #         print("Wrong file!")
+    # print(var1)
+    # print("Is it a dir?: ",var1[0].is_dir(), var1[0])
+    # print("Is it a file?: ", var1[0].is_file(), var1[0])
+    # print(var1[0].name)
+    # print(var1[0].suffix)
+    # print(var1[0].parent)
+    # print(p.with_name("file.txt"))
+    # print(p.absolute())
+
+    # p = Path('/home/pedro/PycharmProjects/lecture_7/test.txt')
+    # print(p.joinpath("test.txt"))
+    # p.exists()
+    # print("Renaming file")
+    # p.rename("test2.txt")
+    # time.sleep(1)
+    # p2 = Path('/home/pedro/PycharmProjects/lecture_7/test2.txt')
+    # print("Renaming file")
+    # p2.rename("test.txt")
+    # time.sleep(1)
+    # print("Deleting file")
+    # p.unlink()
+    p3 = Path('/home/pedro/PycharmProjects/lecture_7/test3.txt')
+    print(p3.stat())
+    print(ctime(p3.stat().st_ctime))
+    print(p3.read_bytes())
+    print(p3.read_text())
+    # print(p3.write_bytes(b'23'))
+    # time.sleep(5)
+    # print(p3.write_text("efgh"))
+
+    # coping
+    source = p3
+    target = Path('/home/pedro/PycharmProjects/lecture_7/test.txt')
+    target.write_text(source.read_text())
+    # or
+    shutil.copy(source, target)
+
 # ===============================================================================
 #  TESTING AREA
 # ===============================================================================
