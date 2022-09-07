@@ -40,6 +40,7 @@ import myModule as mmod
 import myModule2 as mmod2
 import exceptions
 from timeit import timeit
+from pathlib import Path
 # ===============================================================================
 # GLOBAL VARIABLES DECLARATIONS
 # ===============================================================================
@@ -64,27 +65,63 @@ def main():
     # exceptions.file_exceptions()
     # exceptions.file_exceptions1()
     #exceptions.exceptions2()
+#     code1 = """
+# def calculate_xfactor(age):
+#     if age <= 0:
+#         raise ValueError("age cannot be less than 1")
+# try:
+#     calculate_xfactor(-1)
+# except ValueError as er:
+#     pass"""
+#     code2 = """
+# def calculate_xfactor(age):
+#     if age <= 0:
+#         return None
+#     xfactor = calculate_xfactor(-1)
+#     if xfactor == None:
+#         pass
+#     """
+#     print("Code1: ", timeit(code1, number=10000)*1000, "ms")
+#     print("Code2: ", timeit(code2, number=10000)*1000, "ms")
+#     print("End of the program!")
 
+#     code3="""
+# from pathlib import Path
+# p = Path('.')
+# var = list(p.glob('*.txt'))
+# for i in range(0, len(var)):
+#     if (var[i] == Path("file.txt")):
+#         pass
+#     else:
+#         pass
+# """
+#     code4="""
+# from pathlib import Path
+# try:
+#     p = Path('.')
+#     var = list(p.glob('*.txt'))
+#     for i in range(0, len(var)):
+#         if (var[i] == Path("file.txt")):
+#             pass
+#         else:
+#             raise ValueError("should not be here!")
+# except ValueError:
+#     pass
+# """
+#     print("Code3: ", timeit(code3, number=1000)*1000, "ms")
+#     print("Code4: ", timeit(code4, number=1000) * 1000, "ms")
+#     print("End of the program!")
 
-    code1 = """
-def calculate_xfactor(age):
-    if age <= 0:
-        raise ValueError("age cannot be less than 1")
-try:
-    calculate_xfactor(-1)
-except ValueError as er:
-    pass"""
-    code2 = """
-def calculate_xfactor(age):
-    if age <= 0:
-        return None
-    xfactor = calculate_xfactor(-1)
-    if xfactor == None:
-        pass
-    """
-    print("Code1: ", timeit(code1, number=10000)*1000, "ms")
-    print("Code2: ", timeit(code2, number=10000)*1000, "ms")
-    print("End of the program!")
+    p = Path('.')
+    var = list(p.glob('*.txt'))
+    var1 = list(p.glob('*.py'))
+    for i in range(0, len(var)):
+        if (var[i] == Path("file.txt")):
+            print("Found the file!")
+        else:
+            print("Wrong file!")
+    print(var1)
+
 # ===============================================================================
 #  TESTING AREA
 # ===============================================================================
