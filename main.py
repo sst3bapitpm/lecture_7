@@ -37,6 +37,7 @@ __description__ = 'Main python file'
 # IMPORT STATEMENTS
 # ===============================================================================
 import myModule as mmod
+import myModule2 as mmod2
 # ===============================================================================
 # GLOBAL VARIABLES DECLARATIONS
 # ===============================================================================
@@ -48,6 +49,10 @@ def main():
     # print("The author is", __author__)
     # print("The version is", __version__)
     mmod.greeting("Pedro")
+    print(mmod.person1["age"])
+    mmod.person1["age"]=12
+    print(mmod.person1["age"])
+    print(mmod2.person2["country"])
 # ===============================================================================
 #  TESTING AREA
 # ===============================================================================
