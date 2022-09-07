@@ -112,7 +112,7 @@ def main():
 #     print("Code4: ", timeit(code4, number=1000) * 1000, "ms")
 #     print("End of the program!")
 
-    p = Path('.')
+    p = Path('/home/pedro/PycharmProjects/lecture_7')
     var = list(p.glob('*.txt'))
     var1 = list(p.glob('*.py'))
     for i in range(0, len(var)):
@@ -121,7 +121,13 @@ def main():
         else:
             print("Wrong file!")
     print(var1)
-
+    print("Is it a dir?: ",var1[0].is_dir(), var1[0])
+    print("Is it a file?: ", var1[0].is_file(), var1[0])
+    print(var1[0].name)
+    print(var1[0].suffix)
+    print(var1[0].parent)
+    print(p.with_name("file.txt"))
+    print(p.absolute())
 # ===============================================================================
 #  TESTING AREA
 # ===============================================================================
