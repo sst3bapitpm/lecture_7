@@ -80,6 +80,16 @@ def file_exceptions1():
         print("invalid input")
     else:
         print("no excpection thrown")
+
+def exceptions2():
+    try:
+        ans=input(" Select a or b: ")
+        if(ans=="a" or ans=="b"):
+            print("OK")
+        else:
+            raise ValueError("Invalide value")
+    except ValueError as er:
+        print(er)
 # ===============================================================================
 #  TESTING AREA
 # ===============================================================================

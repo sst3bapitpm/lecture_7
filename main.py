@@ -61,7 +61,8 @@ def main():
     # else:
     #     exceptions.example_exceptions()
     # exceptions.file_exceptions()
-    exceptions.file_exceptions1()
+    # exceptions.file_exceptions1()
+    exceptions.exceptions2()
     print("End of the program!")
 # ===============================================================================
 #  TESTING AREA
